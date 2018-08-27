@@ -5,6 +5,7 @@ public class BadmintonCoach implements Coach {
 	private FortuneService fortuneService;
 	
 	public BadmintonCoach(FortuneService theFortuneService) {
+		System.out.println("BadmintonCoach is invoked.");
 		this.fortuneService = theFortuneService;
 	}
 		
