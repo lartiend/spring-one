@@ -7,10 +7,13 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!-- load properties file -->
+	<context:property-placeholder location="classpath:sport.properties"/>
     <!-- Define your beans here -->
     <bean 
     	id="myFortuneService"
-    	class="com.luv2code.springone.HappyFortune">
+    	class="com.luv2code.springone.RandomFortune">
+    	<constructor-arg value="${foo.fortunes}" />
     </bean>
     <bean 
     	id="myCoach"
@@ -22,5 +25,7 @@
     	class="com.luv2code.springone.CricketCoach">
     	<!-- setter injection: the property name is the corresponding setter method name of the CricketCoach class -->
     	<property name="fortuneService" ref="myFortuneService" />
+    	<property name="team" value="${foo.team}" />
+    	<property name="emailAddress" value="${foo.email}" />
     </bean>
 </beans>

@@ -12,6 +12,8 @@ public class MyAppWithSetter {
 		// call bean methods
 		System.out.println(theCoach.getDailyWorkout());
 		System.out.println(theCoach.getDailyFortune());
+		System.out.println(theCoach.getEmailAddress());
+		System.out.println(theCoach.getTeam());
 		// close context
 		context.close();
 	}
