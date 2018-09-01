@@ -6,7 +6,7 @@ public class RandomFortune implements FortuneService {
 
 	private String[] fortunesArray;
 
-	public RandomFortune(String...thefortunes) {
+	public RandomFortune(String[] thefortunes) {
 		System.out.println("RandomFortune is invoked.");
 		this.fortunesArray = thefortunes;
 	}
